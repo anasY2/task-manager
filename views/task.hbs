@@ -1,0 +1,26 @@
+{{>header}}
+      <header>{{name}}  <a href="/user/logout">LogOut...?</a></header>
+    <h1 class="title">Tasks</h1>
+    <div class="container taskBox">
+      <div class="taskContainer">
+        
+          <form action="/user/task" class="task-form" method="post">
+            <input
+              type="text"
+              class="form-control newTask"
+              name="description"
+             
+              placeholder="Enter your task here"
+            />
+            <button type="submit" class="btn btn-md btn-dark ms-3">Add</button>
+          </form>
+     <div class="tasks mt-3">
+       {{#each tasks}}
+        <div class="mb-1" ><p>{{this.description}}</p> <a href="/task/delete/{{this._id}}" role="button" class="btn btn-light btn-sm">Delete</a> </div>
+       {{/each}}
+         
+
+     </div>
+      </div>
+    </div>
+ {{>footer}}

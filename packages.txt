@@ -1,0 +1,9 @@
+
+
+
+bcrypt
+jsonwebtoken
+env-cmd
+validator
+multer and sharp(optional)
+@sendgrid/mail(optional)

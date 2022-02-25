@@ -1,0 +1,33 @@
+{{>header}}
+    <div class="loginContainer">
+    <div class="container loginBox bg-light p-1">
+      <h1 class="login_header">{{title}}</h1>
+      <form action="/user/login" method="post" class="loginForm ">
+        <div class="container loginEmailBox">
+          <label for="loginEmail" class="form-label">Email:</label>
+          <input 
+            type="email"
+            id="loginEmail"
+            class="form-control loginInput"
+            placeholder="Email address..."
+            name="email"
+            required
+          />
+        </div>
+        <div class="container mb-3 loginPassBox">
+          <label for="loginPassword" class="form-label">Password:</label>
+          <input
+            type="password"
+            class="form-control loginInput"
+            id="loginPassword"
+            placeholder="Password..."
+            name="password"
+required
+          />
+        </div>
+        <button type="submit" class="btn btn-dark btn-md ms-3">{{title}}</button>
+      </form>
+      <a href="/signup">SignUp</a>
+    </div>
+</div>
+{{>footer}}
