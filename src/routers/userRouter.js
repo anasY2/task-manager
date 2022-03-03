@@ -66,5 +66,13 @@ route.get("/user/logout", auth, async (req, res) => {
     res.status(400).send(error.message);
   }
 });
-
+//delete User
+route.get("/user/delete",auth, async (req,res)=>{
+  try {
+    await req.user.remove()
+    res.redirect("/")
+  } catch (error) {
+    res.status(400).send(error.message)
+  }
+})
 module.exports = route;
